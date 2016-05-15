@@ -3,7 +3,8 @@ from simpleflight import simpleflight
 from gpkit.tools.fmincon import generate_mfiles
 
 algorithms = ['interior-point', 'SQP']
-guesstypes = ['order-of-magnitude', 'almost-exact-solution', 'ones']
+guesstypes = ['order-of-magnitude-floor', 'order-of-magnitude-round',
+              'almost-exact-solution', 'ones']
 gradobjs = ['on', 'off']
 gradconstrs = ['on', 'off']
 
