@@ -8,6 +8,9 @@ guesstypes = ['order-of-magnitude-floor', 'order-of-magnitude-round',
 gradobjs = ['on', 'off']
 gradconstrs = ['on', 'off']
 
+with open('run_mfiles.m', 'a') as outfile:
+    outfile.write('\n')
+
 for algorithm in algorithms:
     for guesstype in guesstypes:
         for gradobj in gradobjs:
@@ -22,3 +25,5 @@ for algorithm in algorithms:
                 os.rename('objfun.m', directory + '/objfun.m')
                 os.rename('confun.m', directory + '/confun.m')
                 os.rename('lookup.txt', directory + '/lookup.txt')
+                with open('run_mfiles.m', 'a') as outfile:
+                    outfile.write('run ' + directory + '/main.m\n')
