@@ -1,11 +1,13 @@
-x0 = [0.01, 1000, 10, 100, 1, 10, 1E6, 10000, 10, 0.01];
-%x0 = [0.01, 1000.0, 10.0, 100.0, 1.0, 10.0, 10000000.0, 10000.0, 100.0, 0.01, ];
+x0 = [3000.0, 1000000.0, 2.0, 2000.0, 0.0005, 40000.0, 9.0, 2.0, 3000000.0, 2e-06, 0.3, 7.0, 2.0, 7.0, 2.0, 80.0, 40000000.0, 7000.0, 0.4, 1.0, 7000.0, 10000.0, 2000.0, 40.0, 10.0, 0.0008, 0.005, 20.0, 0.8, 0.1, 1.0, 10.0, 3.0, 400000.0, 10.0, ];
 options = optimset('fmincon');
 options.Algorithm = 'interior-point';
 options.MaxFunEvals = Inf;
 options.MaxIter = Inf;
 options.GradObj = 'on';
 options.GradConstr = 'on';
+options.TolCon = 1E-10;
+%options.TolConSQP = 1E-8;
+%options.DerivativeCheck = 'on';
 tic;
 [x,fval] = ...
 fmincon(@objfun,x0,[],[],[],[],[],[],@confun,options);
