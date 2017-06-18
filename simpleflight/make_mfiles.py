@@ -11,7 +11,10 @@ gradconstrs = ['on', 'off']
 otherinitialguess = [0.01, 1000.0, 1.0, 100.0, 0.1, 10.0, 1000000.0, 1000.0,
                      10.0, 0.001, ];
 
-with open('run_mfiles.m', 'a') as outfile:
+excludedcases = ['interior-point/almost-exact-solution/on/on',
+                 'interior-point/ones/off/off']
+
+with open('run_mfiles.m', 'w') as outfile:
     outfile.write('\n')
 
 for algorithm in algorithms:
@@ -37,4 +40,8 @@ for algorithm in algorithms:
                     (gradobj is 'off' and gradconstr is 'off')):
                     with open('run_mfiles.m', 'a') as outfile:
                         outfile.write('disp \'' + directory + '\'\n')
-                        outfile.write('run ' + directory + '/main.m\n')
+                        outfile.write('cd ' + directory + '\n')
+                        if directory in excludedcases:
+                            outfile.write('%')
+                        outfile.write('main\n')
+                        outfile.write('cd ../../../../\n')

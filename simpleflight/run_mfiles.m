@@ -1,41 +1,77 @@
-disp 'interior-point/order-of-magnitude-floor/on/on'
-run interior-point/order-of-magnitude-floor/on/on/main.m
-disp 'interior-point/order-of-magnitude-floor/off/off'
-run interior-point/order-of-magnitude-floor/off/off/main.m
-disp 'interior-point/order-of-magnitude-round/on/on'
-run interior-point/order-of-magnitude-round/on/on/main.m
-disp 'interior-point/order-of-magnitude-round/off/off'
-run interior-point/order-of-magnitude-round/off/off/main.m
-disp 'interior-point/order-of-magnitude-mix/on/on'
-run interior-point/order-of-magnitude-mix/on/on/main.m
-disp 'interior-point/order-of-magnitude-mix/off/off'
-run interior-point/order-of-magnitude-mix/off/off/main.m
-%disp 'interior-point/almost-exact-solution/on/on'
-%run interior-point/almost-exact-solution/on/on/main.m
-disp 'interior-point/almost-exact-solution/off/off'
-run interior-point/almost-exact-solution/off/off/main.m
-disp 'interior-point/ones/on/on'
-run interior-point/ones/on/on/main.m
-%disp 'interior-point/ones/off/off'
-%run interior-point/ones/off/off/main.m
-disp 'SQP/order-of-magnitude-floor/on/on'
-run SQP/order-of-magnitude-floor/on/on/main.m
-disp 'SQP/order-of-magnitude-floor/off/off'
-run SQP/order-of-magnitude-floor/off/off/main.m
-disp 'SQP/order-of-magnitude-round/on/on'
-run SQP/order-of-magnitude-round/on/on/main.m
-disp 'SQP/order-of-magnitude-round/off/off'
-run SQP/order-of-magnitude-round/off/off/main.m
-disp 'SQP/order-of-magnitude-mix/on/on'
-run SQP/order-of-magnitude-mix/on/on/main.m
-disp 'SQP/order-of-magnitude-mix/off/off'
-run SQP/order-of-magnitude-mix/off/off/main.m
-disp 'SQP/almost-exact-solution/on/on'
-run SQP/almost-exact-solution/on/on/main.m
-disp 'SQP/almost-exact-solution/off/off'
-run SQP/almost-exact-solution/off/off/main.m
-disp 'SQP/ones/on/on'
-run SQP/ones/on/on/main.m
-disp 'SQP/ones/off/off'
-run SQP/ones/off/off/main.m
 
+disp 'interior-point/order-of-magnitude-floor/on/on'
+cd interior-point/order-of-magnitude-floor/on/on
+main
+cd ../../../../
+disp 'interior-point/order-of-magnitude-floor/off/off'
+cd interior-point/order-of-magnitude-floor/off/off
+main
+cd ../../../../
+disp 'interior-point/order-of-magnitude-round/on/on'
+cd interior-point/order-of-magnitude-round/on/on
+main
+cd ../../../../
+disp 'interior-point/order-of-magnitude-round/off/off'
+cd interior-point/order-of-magnitude-round/off/off
+main
+cd ../../../../
+disp 'interior-point/order-of-magnitude-mix/on/on'
+cd interior-point/order-of-magnitude-mix/on/on
+main
+cd ../../../../
+disp 'interior-point/order-of-magnitude-mix/off/off'
+cd interior-point/order-of-magnitude-mix/off/off
+main
+cd ../../../../
+disp 'interior-point/almost-exact-solution/on/on'
+cd interior-point/almost-exact-solution/on/on
+%main
+cd ../../../../
+disp 'interior-point/almost-exact-solution/off/off'
+cd interior-point/almost-exact-solution/off/off
+main
+cd ../../../../
+disp 'interior-point/ones/on/on'
+cd interior-point/ones/on/on
+main
+cd ../../../../
+disp 'interior-point/ones/off/off'
+cd interior-point/ones/off/off
+%main
+cd ../../../../
+disp 'SQP/order-of-magnitude-floor/on/on'
+cd SQP/order-of-magnitude-floor/on/on
+main
+cd ../../../../
+disp 'SQP/order-of-magnitude-floor/off/off'
+cd SQP/order-of-magnitude-floor/off/off
+main
+cd ../../../../
+disp 'SQP/order-of-magnitude-round/on/on'
+cd SQP/order-of-magnitude-round/on/on
+main
+cd ../../../../
+disp 'SQP/order-of-magnitude-round/off/off'
+cd SQP/order-of-magnitude-round/off/off
+main
+cd ../../../../
+disp 'SQP/order-of-magnitude-mix/on/on'
+cd SQP/order-of-magnitude-mix/on/on
+main
+cd ../../../../
+disp 'SQP/order-of-magnitude-mix/off/off'
+cd SQP/order-of-magnitude-mix/off/off
+main
+cd ../../../../
+disp 'SQP/almost-exact-solution/on/on'
+cd SQP/almost-exact-solution/on/on
+main
+cd ../../../../
+disp 'SQP/almost-exact-solution/off/off'
+cd SQP/almost-exact-solution/off/off
+main
+cd ../../../../
+disp 'SQP/ones/on/on'
+cd SQP/ones/on/on
+main
+cd ../../../../
