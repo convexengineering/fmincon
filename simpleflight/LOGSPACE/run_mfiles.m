@@ -1,21 +1,41 @@
 
 disp 'interior-point/order-of-magnitude-floor/off/off'
-run interior-point/order-of-magnitude-floor/off/off/main.m
+cd interior-point/order-of-magnitude-floor/off/off
+main
+cd ../../../../
 disp 'interior-point/order-of-magnitude-round/off/off'
-run interior-point/order-of-magnitude-round/off/off/main.m
+cd interior-point/order-of-magnitude-round/off/off
+main
+cd ../../../../
 disp 'interior-point/order-of-magnitude-mix/off/off'
-run interior-point/order-of-magnitude-mix/off/off/main.m
+cd interior-point/order-of-magnitude-mix/off/off
+main
+cd ../../../../
 disp 'interior-point/almost-exact-solution/off/off'
-run interior-point/almost-exact-solution/off/off/main.m
+cd interior-point/almost-exact-solution/off/off
+main
+cd ../../../../
 disp 'interior-point/ones/off/off'
-run interior-point/ones/off/off/main.m
+cd interior-point/ones/off/off
+main
+cd ../../../../
 disp 'SQP/order-of-magnitude-floor/off/off'
-run SQP/order-of-magnitude-floor/off/off/main.m
+cd SQP/order-of-magnitude-floor/off/off
+main
+cd ../../../../
 disp 'SQP/order-of-magnitude-round/off/off'
-run SQP/order-of-magnitude-round/off/off/main.m
+cd SQP/order-of-magnitude-round/off/off
+main
+cd ../../../../
 disp 'SQP/order-of-magnitude-mix/off/off'
-run SQP/order-of-magnitude-mix/off/off/main.m
+cd SQP/order-of-magnitude-mix/off/off
+main
+cd ../../../../
 disp 'SQP/almost-exact-solution/off/off'
-run SQP/almost-exact-solution/off/off/main.m
+cd SQP/almost-exact-solution/off/off
+main
+cd ../../../../
 disp 'SQP/ones/off/off'
-run SQP/ones/off/off/main.m
+cd SQP/ones/off/off
+main
+cd ../../../../

@@ -35,4 +35,6 @@ for algorithm in algorithms:
                 os.rename('lookup.txt', directory + '/lookup.txt')
                 with open('run_mfiles.m', 'a') as outfile:
                     outfile.write('disp \'' + directory + '\'\n')
-                    outfile.write('run ' + directory + '/main.m\n')
+                    outfile.write('cd ' + directory + '\n')
+                    outfile.write('main\n')
+                    outfile.write('cd ../../../../\n')
