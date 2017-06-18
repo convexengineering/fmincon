@@ -1,7 +1,7 @@
 
 algorithms = ['interior-point', 'SQP']
 guesstypes = ['ones', 'almost-exact-solution', 'order-of-magnitude-floor',
-              'order-of-magnitude-round', 'order-of-magnitude-mixed']
+              'order-of-magnitude-round', 'order-of-magnitude-mix']
 guesstypesdict = dict(zip(guesstypes, ['A','B','C','D','E']))
 gradobjs = ['off']
 gradconstrs = ['off']

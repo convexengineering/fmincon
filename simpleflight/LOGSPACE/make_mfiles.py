@@ -11,7 +11,7 @@ gradconstrs = ['off']
 otherinitialguess = [0.01, 1000.0, 1.0, 100.0, 0.1, 10.0, 1000000.0, 1000.0,
                      10.0, 0.001, ];
 
-with open('run_mfiles.m', 'a') as outfile:
+with open('run_mfiles.m', 'w') as outfile:
     outfile.write('\n')
 
 for algorithm in algorithms:
@@ -25,7 +25,10 @@ for algorithm in algorithms:
                         os.makedirs(directory)
                 if guesstype == 'order-of-magnitude-mix':
                     generate_mfiles(sf, logspace=True, algorithm=algorithm,
-                                    guesstype=guesstype)
+                   guess=otherinitialguess)
+                else:
+                    generate_mfiles(sf, logspace=True, algorithm=algorithm,
+                    guess=guesstype)
                 os.rename('main.m', directory + '/main.m')
                 os.rename('objfun.m', directory + '/objfun.m')
                 os.rename('confun.m', directory + '/confun.m')
