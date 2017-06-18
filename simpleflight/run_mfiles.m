@@ -75,3 +75,7 @@ disp 'SQP/ones/on/on'
 cd SQP/ones/on/on
 main
 cd ../../../../
+disp 'SQP/ones/off/off'
+cd SQP/ones/off/off
+main
+cd ../../../../

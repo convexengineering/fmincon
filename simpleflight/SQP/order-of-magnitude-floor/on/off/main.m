@@ -17,4 +17,7 @@ fprintf(fid, '%d', output.iterations);
 fclose(fid);
 fid = fopen('cost.txt', 'w');
 fprintf(fid, '%.5g', fval);
+if exitflag == -2
+	fprintf(fid, '(i)');
+end
 fclose(fid);
