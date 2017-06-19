@@ -264,7 +264,7 @@ class LandingGear(CostedConstraintSet):
                          'N_s': 2,
                          'W_{0_{lg}}': 82000*9.81,
                          '\\eta_s': 0.8,
-                         '\\eta_t': 0.47,
+                         #'\\eta_t': 0.47,
                          '\\lambda_{LG}': 2.5,
                          '\\rho_{st}': 7850,
                          '\\tan(\\gamma)': np.tan(5*np.pi/180),
