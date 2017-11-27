@@ -1,4 +1,4 @@
-x0 = [0.02, 2000.0, 8.0, 300.0, 0.5, 20.0, 4000000.0, 7000.0, 40.0, 0.004, ];
+x0 = [40.0, 2000.0, 4000000.0, 300.0, 8.0, 7000.0, 0.5, 20.0, 0.004, 0.02, ];
 options = optimset('fmincon');
 options.Algorithm = 'interior-point';
 options.MaxFunEvals = Inf;

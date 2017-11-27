@@ -1,4 +1,4 @@
-x0 = [-4.60517018599, 6.90775527898, 2.30258509299, 4.60517018599, 0.0, 2.30258509299, 16.118095651, 9.21034037198, 4.60517018599, -4.60517018599, ];
+x0 = [4.60517018599, 6.90775527898, 2.30258509299, -4.60517018599, 0.0, 2.30258509299, 16.118095651, 9.21034037198, 4.60517018599, -4.60517018599, ];
 options = optimset('fmincon');
 options.Algorithm = 'interior-point';
 options.MaxFunEvals = Inf;
@@ -17,4 +17,7 @@ fprintf(fid, '%d', output.iterations);
 fclose(fid);
 fid = fopen('cost.txt', 'w');
 fprintf(fid, '%.5g', exp(fval));
+if exitflag == -2
+	fprintf(fid, '(i)');
+end
 fclose(fid);

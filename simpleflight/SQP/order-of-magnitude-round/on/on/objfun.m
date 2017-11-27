@@ -4,7 +4,7 @@ if nargout > 1
     gradf  = [0
               0
               0
-              1
+              0
               0
               0
               0

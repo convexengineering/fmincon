@@ -1,7 +1,7 @@
-x_1: C_D
+x_1: D
 x_2: W_w
 x_3: A
-x_4: D
+x_4: C_D
 x_5: C_L
 x_6: S
 x_7: Re
