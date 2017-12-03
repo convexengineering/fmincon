@@ -1,0 +1,33 @@
+#Results Table
+interior-point/order-of-magnitude-floor/on/on/   
+interior-point/order-of-magnitude-floor/on/off/  
+interior-point/order-of-magnitude-floor/off/on/  
+interior-point/order-of-magnitude-floor/off/off/         -17142          25438           96.1 
+interior-point/order-of-magnitude-round/on/on/           5330.9             34            0.1 
+interior-point/order-of-magnitude-round/on/off/  
+interior-point/order-of-magnitude-round/off/on/  
+interior-point/order-of-magnitude-round/off/off/         667.18            795            3.9 
+interior-point/almost-exact-solution/on/on/              3245.8            458            1.9 
+interior-point/almost-exact-solution/on/off/     
+interior-point/almost-exact-solution/off/on/     
+interior-point/almost-exact-solution/off/off/            4547.9         146477          394.7 
+interior-point/ones/on/on/                             -7151(i)            191            0.4 
+interior-point/ones/on/off/                      
+interior-point/ones/off/on/                      
+interior-point/ones/off/off/                           -3094(i)           6430           27.3 
+SQP/order-of-magnitude-floor/on/on/                   -18431(i)             36            0.4 
+SQP/order-of-magnitude-floor/on/off/             
+SQP/order-of-magnitude-floor/off/on/             
+SQP/order-of-magnitude-floor/off/off/                -5747.5(i)             33            0.2 
+SQP/order-of-magnitude-round/on/on/                   5160.6(i)             15            0.1 
+SQP/order-of-magnitude-round/on/off/             
+SQP/order-of-magnitude-round/off/on/             
+SQP/order-of-magnitude-round/off/off/               -1.5756e+12          12837           15.3 
+SQP/almost-exact-solution/on/on/                     -5020.6(i)             42            0.1 
+SQP/almost-exact-solution/on/off/                
+SQP/almost-exact-solution/off/on/                
+SQP/almost-exact-solution/off/off/                       4547.9             51            0.1 
+SQP/ones/on/on/                                  -3.9023e+06(i)             32            0.1 
+SQP/ones/on/off/                                 
+SQP/ones/off/on/                                 
+SQP/ones/off/off/                                    -448.57(i)             99            0.3 
