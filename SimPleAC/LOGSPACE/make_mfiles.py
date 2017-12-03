@@ -4,13 +4,12 @@ from gpkit.tools.fmincon import generate_mfiles
 from gpkit import Model
 
 algorithms = ['interior-point', 'SQP']
-#guesstypes = ['order-of-magnitude-floor', 'order-of-magnitude-round',
-#              'almost-exact-solution', 'ones']
-guesstypes = ['ones']
+guesstypes = ['order-of-magnitude-floor', 'order-of-magnitude-round',
+              'almost-exact-solution', 'ones']
 gradobjs = ['off']
 gradconstrs = ['off']
 
-with open('run_mfiles.m', 'a') as outfile:
+with open('run_mfiles.m', 'w') as outfile:
     outfile.write('\n')
 
 for algorithm in algorithms:
