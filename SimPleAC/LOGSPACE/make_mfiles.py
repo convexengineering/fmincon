@@ -8,8 +8,8 @@ from gpkit.small_scripts import mag
 algorithms = ['interior-point', 'SQP']
 guesstypes = ['order-of-magnitude-floor', 'order-of-magnitude-round',
               'almost-exact-solution', 'ones']
-gradobjs = ['on', 'off']
-gradconstrs = ['on', 'off']
+gradobjs = ['off']
+gradconstrs = ['off']
 
 with open('run_mfiles.m', 'w') as outfile:
     outfile.write('\n')

@@ -3,8 +3,8 @@ import os
 algorithms = ['interior-point', 'SQP']
 guesstypes = ['order-of-magnitude-floor', 'order-of-magnitude-round',
               'almost-exact-solution', 'ones']
-gradobjs = ['on', 'off']
-gradconstrs = ['on', 'off']
+gradobjs = ['off']
+gradconstrs = ['off']
 
 excludedcases = ['interior-point/order-of-magnitude-floor/on/on']
 
