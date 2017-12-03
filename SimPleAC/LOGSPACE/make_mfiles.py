@@ -6,8 +6,8 @@ from gpkit import Model
 algorithms = ['interior-point', 'SQP']
 guesstypes = ['order-of-magnitude-floor', 'order-of-magnitude-round',
               'almost-exact-solution', 'ones']
-gradobjs = ['off']
-gradconstrs = ['off']
+gradobjs = ['on', 'off']
+gradconstrs = ['on', 'off']
 
 with open('run_mfiles.m', 'w') as outfile:
     outfile.write('\n')
