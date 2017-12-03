@@ -33,6 +33,7 @@ for algorithm in algorithms:
                 if ((gradobj is 'on' and gradconstr is 'on') or
                     (gradobj is 'off' and gradconstr is 'off')):
                     with open('run_mfiles.m', 'a') as outfile:
+                        outfile.write('clear\n')
                         outfile.write('disp \'' + directory + '\'\n')
                         outfile.write('cd ' + directory + '\n')
                         if directory in excludedcases:
