@@ -1,5 +1,5 @@
 #Results Table
-interior-point/order-of-magnitude-floor/on/on/   
+interior-point/order-of-magnitude-floor/on/on/        457.57(i)            229            0.7 
 interior-point/order-of-magnitude-floor/off/off/         4543.6           2006           17.8 
 interior-point/order-of-magnitude-round/on/on/        2874.5(i)          18114           87.1 
 interior-point/order-of-magnitude-round/off/off/         4543.6          55821          376.0 

@@ -8,9 +8,9 @@ guesstypes = ['order-of-magnitude-floor', 'order-of-magnitude-round',
 gradobjs = ['on', 'off']
 gradconstrs = ['on', 'off']
 
-excludedcases = ['interior-point/order-of-magnitude-floor/on/on',
+#excludedcases = ['interior-point/order-of-magnitude-floor/on/on',
 #                 'interior-point/ones/off/off'
-                ]
+#                ]
 
 with open('run_mfiles.m', 'w') as outfile:
     outfile.write('\n')
@@ -36,7 +36,7 @@ for algorithm in algorithms:
                         outfile.write('clear\n')
                         outfile.write('disp \'' + directory + '\'\n')
                         outfile.write('cd ' + directory + '\n')
-                        if directory in excludedcases:
-                            outfile.write('%')
+#                        if directory in excludedcases:
+#                            outfile.write('%')
                         outfile.write('main\n')
                         outfile.write('cd ../../../../\n')
