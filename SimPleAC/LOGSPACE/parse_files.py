@@ -20,7 +20,7 @@ for algorithm in algorithms:
                     directory = (algorithm + '/' + guesstype + '/' + gradobj + '/' +
                                  gradconstr + '/' + iteri + '/')
                     with open('results.txt', 'a') as outfile:
-                        outfile.write('{0:<48}'.format(directory) + ' ')
+                        outfile.write('{0:<55}'.format(directory) + ' ')
                     if os.path.exists(directory):
                         for metric in ['cost', 'iterations', 'elapsed']:
                             if os.path.exists(directory + metric + '.txt'):
