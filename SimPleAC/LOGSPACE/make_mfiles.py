@@ -2,6 +2,8 @@ import os
 from SimPleAC import SimPleAC
 from gpkit.tools.fmincon import generate_mfiles
 from gpkit import Model
+from math import log10, floor, log
+from gpkit.small_scripts import mag
 
 algorithms = ['interior-point', 'SQP']
 guesstypes = ['order-of-magnitude-floor', 'order-of-magnitude-round',
@@ -12,17 +14,31 @@ gradconstrs = ['on', 'off']
 with open('run_mfiles.m', 'w') as outfile:
     outfile.write('\n')
 
+m = SimPleAC()
+sol = m.localsolve(modifylastgp=False)
+
 for algorithm in algorithms:
     for guesstype in guesstypes:
+        # Create x0
+        x0 = {}
+        for vk in sol['freevariables'].keys():
+            xf = mag(sol['freevariables'][vk])
+            if guesstype == "almost-exact-solution":
+                x0[vk] = round(xf, -int(floor(log10(abs(xf))))) # rounds to 1sf
+            elif guesstype == "order-of-magnitude-floor":
+                x0[vk] = 10**floor(log10(xf))
+            elif guesstype == "order-of-magnitude-round":
+                x0[vk] = 10**round(log10(xf))
+            elif guesstype == "ones":
+                x0[vk] = 1
         for gradobj in gradobjs:
             for gradconstr in gradconstrs:
                 m = SimPleAC()
-                sol = m.localsolve(modifylastgp=False)
+                sol = m.localsolve(x0=x0, modifylastgp=False)
                 numgps = len(m.program.gps)
-                # TODO: initiate with correct initial guess?
                 for i in range(numgps):
                     sa = SimPleAC()
-                    sol = sa.localsolve(modifylastgp=False)
+                    sol = sa.localsolve(x0=x0, modifylastgp=False)
                     gp = sa.program.gps[i]
                     m = Model(gp.cost, gp.flat(constraintsets=False), gp.substitutions)
                     directory = (algorithm + '/' + guesstype + '/' + gradobj + '/' +
