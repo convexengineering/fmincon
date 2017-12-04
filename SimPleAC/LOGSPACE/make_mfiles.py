@@ -61,4 +61,4 @@ for algorithm in algorithms:
                         outfile.write('disp \'' + directory + '\'\n')
                         outfile.write('cd ' + directory + '\n')
                         outfile.write('main\n')
-                        outfile.write('cd ../../../../\n')
+                        outfile.write('cd ../../../../../\n')
