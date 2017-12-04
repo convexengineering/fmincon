@@ -57,4 +57,8 @@ for algorithm in algorithms:
                     os.rename('confun.m', directory + '/confun.m')
                     os.rename('lookup.txt', directory + '/lookup.txt')
                     with open('run_mfiles.m', 'a') as outfile:
-                        outfile.write('run ' + directory + '/main.m\n')
+                        outfile.write('clear\n')
+                        outfile.write('disp \'' + directory + '\'\n')
+                        outfile.write('cd ' + directory + '\n')
+                        outfile.write('main\n')
+                        outfile.write('cd ../../../../\n')
