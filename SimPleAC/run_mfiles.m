@@ -2,7 +2,7 @@
 clear
 disp 'interior-point/order-of-magnitude-floor/on/on'
 cd interior-point/order-of-magnitude-floor/on/on
-%main
+main
 cd ../../../../
 clear
 disp 'interior-point/order-of-magnitude-floor/off/off'

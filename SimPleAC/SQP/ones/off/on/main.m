@@ -21,3 +21,8 @@ if exitflag == -2
 	fprintf(fid, '(i)');
 end
 fclose(fid);
+fid = fopen('solution.txt', 'w');
+for i = 1:numel(x)
+    fprintf(fid, '%.3g\n', x(i));
+end
+fclose(fid);
