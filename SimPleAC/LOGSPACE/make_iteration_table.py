@@ -1,3 +1,4 @@
+import os
 
 algorithms = ['interior-point', 'SQP']
 guesstypes = ['ones', 'almost-exact-solution', 'order-of-magnitude-floor',
@@ -20,13 +21,14 @@ for algorithm in algorithms:
                 for i in range(1,5):
                     directory = (algorithm + '/' + guesstype + '/' + gradobj + '/' +
                                  gradconstr + '/' + 'iter_{0}'.format(i) + '/')
-                    if i != 1:
-                        string += '&'
-                    string += '{0} &\n'.format(i)
-                    string += '\\input{\\SAdirlog/' + directory + 'cost.txt} &\n'
-                    string += '\\input{\\SAdirlog/' + directory + 'elapsed.txt} &\n'
-                    string += '\\input{\\SAdirlog/' + directory + 'iterations.txt}'
-                    string += '\\\\ \n'
+                    if os.path.exists(directory):
+                        if i != 1:
+                            string += '&'
+                        string += '{0} &\n'.format(i)
+                        string += '\\input{\\SAdirlog/' + directory + 'cost.txt} &\n'
+                        string += '\\input{\\SAdirlog/' + directory + 'elapsed.txt} &\n'
+                        string += '\\input{\\SAdirlog/' + directory + 'iterations.txt}'
+                        string += '\\\\ \n'
 
     with open('iterationtable_{0}.tex'.format(algorithm.replace("interior-point",
               "IP")), 'w') as f:

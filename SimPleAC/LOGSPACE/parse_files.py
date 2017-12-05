@@ -24,14 +24,13 @@ for algorithm in algorithms:
                     if os.path.exists(directory):
                         with open('results.txt', 'a') as outfile:
                             outfile.write('{0:<55}'.format(directory) + ' ')
-                        if os.path.exists(directory):
-                            for metric in ['cost', 'iterations', 'elapsed']:
-                                if os.path.exists(directory + metric + '.txt'):
-                                    with open(directory + metric + '.txt', 'r') as f:
-                                        result[metric] = f.readline()
+                        for metric in ['cost', 'iterations', 'elapsed']:
+                            if os.path.exists(directory + metric + '.txt'):
+                                with open(directory + metric + '.txt', 'r') as f:
+                                    result[metric] = f.readline()
 
-                                    with open('results.txt', 'a') as outfile:
-                                        outfile.write('{0:>14}'.format(result[metric]) + ' ')
+                                with open('results.txt', 'a') as outfile:
+                                    outfile.write('{0:>14}'.format(result[metric]) + ' ')
                         with open('results.txt', 'a') as outfile:
                             outfile.write('\n')
 
