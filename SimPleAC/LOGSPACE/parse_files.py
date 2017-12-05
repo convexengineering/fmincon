@@ -21,23 +21,24 @@ for algorithm in algorithms:
                     result = {}
                     directory = (algorithm + '/' + guesstype + '/' + gradobj + '/' +
                                  gradconstr + '/' + iteri + '/')
-                    with open('results.txt', 'a') as outfile:
-                        outfile.write('{0:<55}'.format(directory) + ' ')
                     if os.path.exists(directory):
-                        for metric in ['cost', 'iterations', 'elapsed']:
-                            if os.path.exists(directory + metric + '.txt'):
-                                with open(directory + metric + '.txt', 'r') as f:
-                                    result[metric] = f.readline()
+                        with open('results.txt', 'a') as outfile:
+                            outfile.write('{0:<55}'.format(directory) + ' ')
+                        if os.path.exists(directory):
+                            for metric in ['cost', 'iterations', 'elapsed']:
+                                if os.path.exists(directory + metric + '.txt'):
+                                    with open(directory + metric + '.txt', 'r') as f:
+                                        result[metric] = f.readline()
 
-                                with open('results.txt', 'a') as outfile:
-                                    outfile.write('{0:>14}'.format(result[metric]) + ' ')
-                    with open('results.txt', 'a') as outfile:
-                        outfile.write('\n')
+                                    with open('results.txt', 'a') as outfile:
+                                        outfile.write('{0:>14}'.format(result[metric]) + ' ')
+                        with open('results.txt', 'a') as outfile:
+                            outfile.write('\n')
 
-                    # Cumulative measures
-                    finalcost = float(result['cost']) # only want final
-                    cumiterations += float(result['iterations'])
-                    cumelapsed += float(result['elapsed'])
+                        # Cumulative measures
+                        finalcost = float(result['cost']) # only want final
+                        cumiterations += float(result['iterations'])
+                        cumelapsed += float(result['elapsed'])
                 directory0 = (algorithm + '/' + guesstype + '/' + gradobj + '/' +
                               gradconstr + '/')
                 with open(directory0 + 'cost.txt', 'w') as outfile:
