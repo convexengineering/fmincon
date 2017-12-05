@@ -22,7 +22,10 @@ if exitflag == -2
 end
 fclose(fid);
 fid = fopen('solution.txt', 'w');
+fid2 = fopen('initialguess.txt', 'w');
 for i = 1:numel(x)
-    fprintf(fid, '%.3g\n', x(i));
+    fprintf(fid, '%.4g\n', x(i));
+    fprintf(fid2, '%.3g\n', x0(i));
 end
 fclose(fid);
+fclose(fid2);
