@@ -2,9 +2,9 @@ x0 = [1.0, 0.1, 0.01, 1000.0, 10000.0, 1.0, 0.1, 1000.0, 10.0, 1000.0, 10.0, 100
 options = optimset('fmincon');
 options.Algorithm = 'SQP';
 options.MaxFunEvals = Inf;
-options.MaxIter = Inf;
-options.GradObj = 'off';
-options.GradConstr = 'on';
+options.MaxIter = 100000;
+options.SpecifyObjectiveGradient = false;
+options.SpecifyConstraintGradient = true;
 tic;
 [x,fval, exitflag, output] = ...
 fmincon(@objfun,x0,[],[],[],[],[],[],@confun,options);

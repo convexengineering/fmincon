@@ -2,9 +2,9 @@ x0 = ones(20,1);
 options = optimset('fmincon');
 options.Algorithm = 'interior-point';
 options.MaxFunEvals = Inf;
-options.MaxIter = Inf;
-options.GradObj = 'off';
-options.GradConstr = 'on';
+options.MaxIter = 100000;
+options.SpecifyObjectiveGradient = false;
+options.SpecifyConstraintGradient = true;
 tic;
 [x,fval, exitflag, output] = ...
 fmincon(@objfun,x0,[],[],[],[],[],[],@confun,options);
