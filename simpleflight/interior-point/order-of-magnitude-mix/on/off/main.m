@@ -5,7 +5,6 @@ options.MaxFunEvals = Inf;
 options.MaxIter = 100000;
 options.SpecifyObjectiveGradient = true;
 options.SpecifyConstraintGradient = false;
-options.CheckGradients = true;
 tic;
 [x,fval, exitflag, output] = ...
 fmincon(@objfun,x0,[],[],[],[],[],[],@confun,options);
