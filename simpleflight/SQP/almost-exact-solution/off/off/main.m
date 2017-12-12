@@ -1,10 +1,10 @@
-x0 = [40.0, 2000.0, 4000000.0, 300.0, 8.0, 7000.0, 0.5, 20.0, 0.004, 0.02, ];
+x0 = [300.0, 2000.0, 8.0, 0.02, 0.5, 20.0, 4000000.0, 7000.0, 40.0, 0.004, ]';
 options = optimset('fmincon');
 options.Algorithm = 'SQP';
 options.MaxFunEvals = Inf;
-options.MaxIter = Inf;
-options.GradObj = 'off';
-options.GradConstr = 'off';
+options.MaxIter = 100000;
+options.SpecifyObjectiveGradient = false;
+options.SpecifyConstraintGradient = false;
 tic;
 [x,fval, exitflag, output] = ...
 fmincon(@objfun,x0,[],[],[],[],[],[],@confun,options);
@@ -20,4 +20,15 @@ fprintf(fid, '%.5g', fval);
 if exitflag == -2
 	fprintf(fid, '(i)');
 end
+if exitflag == 0
+	fprintf(fid, '(e)');
+end
 fclose(fid);
+fid = fopen('solution.txt', 'w');
+fid2 = fopen('initialguess.txt', 'w');
+for i = 1:numel(x)
+    fprintf(fid, '%.4g\n', x(i));
+    fprintf(fid2, '%.3g\n', x0(i));
+end
+fclose(fid);
+fclose(fid2);

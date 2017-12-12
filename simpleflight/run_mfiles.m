@@ -25,7 +25,7 @@ main
 cd ../../../../
 disp 'interior-point/almost-exact-solution/on/on'
 cd interior-point/almost-exact-solution/on/on
-%main
+main
 cd ../../../../
 disp 'interior-point/almost-exact-solution/off/off'
 cd interior-point/almost-exact-solution/off/off
@@ -37,7 +37,7 @@ main
 cd ../../../../
 disp 'interior-point/ones/off/off'
 cd interior-point/ones/off/off
-%main
+main
 cd ../../../../
 disp 'SQP/order-of-magnitude-floor/on/on'
 cd SQP/order-of-magnitude-floor/on/on

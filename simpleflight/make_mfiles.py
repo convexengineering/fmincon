@@ -11,8 +11,8 @@ gradconstrs = ['on', 'off']
 otherinitialguess = [0.01, 1000.0, 1.0, 100.0, 0.1, 10.0, 1000000.0, 1000.0,
                      10.0, 0.001, ];
 
-excludedcases = ['interior-point/almost-exact-solution/on/on',
-                 'interior-point/ones/off/off']
+excludedcases = []#'interior-point/almost-exact-solution/on/on',
+                 #'interior-point/ones/off/off']
 
 with open('run_mfiles.m', 'w') as outfile:
     outfile.write('\n')

@@ -1,7 +1,7 @@
 function [f, gradf] = objfun(x)
-f = x(4);
+f = x(1);
 if nargout > 1
-    gradf  = [0
+    gradf  = [1
               0
               0
               0
