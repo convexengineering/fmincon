@@ -3,7 +3,7 @@ interior-point/order-of-magnitude-floor/on/on/        3.7917(i)            192  
 interior-point/order-of-magnitude-floor/off/off/         4543.6           2006            9.7 
 interior-point/order-of-magnitude-round/on/on/           4543.6          55821          291.5 
 interior-point/order-of-magnitude-round/off/off/         4543.6          55821          300.5 
-interior-point/almost-exact-solution/on/on/             0.11445         100000          397.4 
+interior-point/almost-exact-solution/on/on/          0.11445(e)         100000          397.4 
 interior-point/almost-exact-solution/off/off/            4543.6           1939           10.0 
 interior-point/ones/on/on/                        0.00029284(i)          73654          313.6 
 interior-point/ones/off/off/                      0.00029284(i)          73654          316.6 

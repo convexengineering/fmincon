@@ -20,6 +20,9 @@ fprintf(fid, '%.5g', fval);
 if exitflag == -2
 	fprintf(fid, '(i)');
 end
+if exitflag == 0
+	fprintf(fid, '(e)');
+end
 fclose(fid);
 fid = fopen('solution.txt', 'w');
 fid2 = fopen('initialguess.txt', 'w');
