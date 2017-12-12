@@ -1,5 +1,5 @@
 x0 = ones(20,1);
-options = optimset('fmincon');
+options = optimoptions('fmincon');
 options.Algorithm = 'interior-point';
 options.MaxFunEvals = Inf;
 options.MaxIter = 100000;

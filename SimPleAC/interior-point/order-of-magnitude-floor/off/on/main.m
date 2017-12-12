@@ -1,5 +1,5 @@
 x0 = [0.1, 0.01, 0.01, 1000.0, 1000.0, 0.1, 0.1, 1000.0, 10.0, 1000.0, 10.0, 100.0, 0.1, 10.0, 1000000.0, 10000.0, 10.0, 10.0, 0.001, 0.1, ]';
-options = optimset('fmincon');
+options = optimoptions('fmincon');
 options.Algorithm = 'interior-point';
 options.MaxFunEvals = Inf;
 options.MaxIter = 100000;
