@@ -2,7 +2,7 @@ x0 = [0.01, 1000.0, 1.0, 100.0, 0.1, 10.0, 1000000.0, 1000.0, 10.0, 0.001, ]';
 options = optimoptions('fmincon');
 options.Algorithm = 'interior-point';
 options.MaxFunEvals = Inf;
-options.MaxIter = 100000;
+options.MaxIter = 300000;
 options.SpecifyObjectiveGradient = true;
 options.SpecifyConstraintGradient = true;
 tic;

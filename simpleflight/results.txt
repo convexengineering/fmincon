@@ -1,9 +1,9 @@
 #Results Table
 interior-point/order-of-magnitude-floor/on/on/      0.075198(i)          14423           37.5 
 interior-point/order-of-magnitude-floor/off/off/   0.0001601(i)         227857          852.2 
-interior-point/order-of-magnitude-round/on/on/        357.73(e)         100000          339.9 
+interior-point/order-of-magnitude-round/on/on/        359.38(e)         300000         1085.3 
 interior-point/order-of-magnitude-round/off/off/         303.14          11562           53.2 
-interior-point/order-of-magnitude-mix/on/on/       0.0040007(e)         100000          337.5 
+interior-point/order-of-magnitude-mix/on/on/       0.0037398(e)         300000          968.5 
 interior-point/order-of-magnitude-mix/off/off/       9.9955e-07          24621           70.0 
 interior-point/almost-exact-solution/on/on/              303.14             88            0.2 
 interior-point/almost-exact-solution/off/off/            303.14            105            0.2 
