@@ -1,10 +1,11 @@
 x0 = [100.0, 1000.0, 10.0, 0.01, 1.0, 10.0, 10000000.0, 10000.0, 100.0, 0.01, ]';
-options = optimset('fmincon');
+options = optimoptions('fmincon');
 options.Algorithm = 'interior-point';
 options.MaxFunEvals = Inf;
 options.MaxIter = 100000;
 options.SpecifyObjectiveGradient = true;
 options.SpecifyConstraintGradient = false;
+options.CheckGradients = true;
 tic;
 [x,fval, exitflag, output] = ...
 fmincon(@objfun,x0,[],[],[],[],[],[],@confun,options);

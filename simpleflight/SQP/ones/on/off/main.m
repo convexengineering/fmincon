@@ -1,10 +1,11 @@
 x0 = ones(10,1);
-options = optimset('fmincon');
+options = optimoptions('fmincon');
 options.Algorithm = 'SQP';
 options.MaxFunEvals = Inf;
 options.MaxIter = 100000;
 options.SpecifyObjectiveGradient = true;
 options.SpecifyConstraintGradient = false;
+options.CheckGradients = true;
 tic;
 [x,fval, exitflag, output] = ...
 fmincon(@objfun,x0,[],[],[],[],[],[],@confun,options);
