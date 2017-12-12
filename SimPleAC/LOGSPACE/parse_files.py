@@ -43,7 +43,7 @@ for algorithm in algorithms:
                 with open(directory0 + 'cost.txt', 'w') as outfile:
                     outfile.write(str(finalcost))
                 with open(directory0 + 'iterations.txt', 'w') as outfile:
-                    outfile.write(str(cumiterations))
+                    outfile.write(str(int(cumiterations)))
                 with open(directory0 + 'elapsed.txt', 'w') as outfile:
                     outfile.write(str(cumelapsed))
 
